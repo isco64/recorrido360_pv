@@ -2818,7 +2818,16 @@ value:this.WaveFunc(this._i)*this._mag}]}]}}};
 		C3.Plugins.System.Acts.CreateObject,
 		C3.Plugins.iframe.Acts.DisplayHTMLString,
 		C3.Plugins.iframe.Acts.SetSize,
+		C3.Plugins.Mouse.Cnds.IsOverObject,
+		C3.Plugins.Mouse.Acts.SetCursor,
+		C3.Plugins.Sprite.Cnds.CompareFrame,
+		C3.Plugins.Sprite.Acts.SetAnimFrame,
+		C3.Plugins.Sprite.Exps.AnimationFrameCount,
 		C3.Plugins.System.Cnds.Else,
+		C3.Plugins.Sprite.Exps.AnimationFrame,
+		C3.Plugins.System.Cnds.PickByComparison,
+		C3.Plugins.Sprite.Exps.LayerNumber,
+		C3.Plugins.Touch.Cnds.OnTapGestureObject,
 		C3.Plugins.iframe.Acts.Destroy
 		];
 	};
@@ -2836,7 +2845,13 @@ value:this.WaveFunc(this._i)*this._mag}]}]}}};
 		{iframe: 0},
 		{Sprite: 0},
 		{layer: 0},
-		{exit: 0}
+		{exit: 0},
+		{Sprite2: 0},
+		{Sprite3: 0},
+		{izquierda: 0},
+		{derecha: 0},
+		{flechas: 0},
+		{iconos: 0}
 	];
 }
 
@@ -2948,9 +2963,18 @@ value:this.WaveFunc(this._i)*this._mag}]}]}}};
 		},
 		() => 644,
 		() => 362.25,
+		() => 0,
 		p => {
 			const n0 = p._GetNode(0);
-			return () => n0.ExpInstVar();
+			return () => n0.ExpObject();
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() - 1);
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() + 1);
 		}
 	];
 }
