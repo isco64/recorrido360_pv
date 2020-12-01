@@ -2728,8 +2728,7 @@ ImageWidth(){return this.GetCurrentImageInfo().GetWidth()},ImageHeight(){return 
 		C3.Plugins.Sprite.Cnds.CompareFrame,
 		C3.Plugins.Sprite.Exps.AnimationFrameCount,
 		C3.Plugins.Sprite.Acts.SetAnimFrame,
-		C3.Plugins.Sprite.Exps.AnimationFrame,
-		C3.Plugins.System.Acts.SetLayerVisible
+		C3.Plugins.Sprite.Exps.AnimationFrame
 		];
 	};
 	self.C3_JsPropNameTable = [
@@ -2858,8 +2857,7 @@ ImageWidth(){return this.GetCurrentImageInfo().GetWidth()},ImageHeight(){return 
 		p => {
 			const n0 = p._GetNode(0);
 			return () => n0.ExpObject();
-		},
-		() => "Layer 1"
+		}
 	];
 }
 
