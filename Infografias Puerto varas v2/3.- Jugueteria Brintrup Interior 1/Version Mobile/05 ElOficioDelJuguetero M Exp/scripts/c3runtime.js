@@ -2815,18 +2815,15 @@ value:this.WaveFunc(this._i)*this._mag}]}]}}};
 		C3.Plugins.System.Cnds.LayerVisible,
 		C3.Plugins.Touch.Cnds.OnTouchObject,
 		C3.Plugins.System.Acts.SetLayerVisible,
-		C3.Plugins.System.Acts.CreateObject,
-		C3.Plugins.iframe.Acts.DisplayHTMLString,
-		C3.Plugins.iframe.Acts.SetSize,
 		C3.Plugins.Mouse.Cnds.IsOverObject,
 		C3.Plugins.Mouse.Acts.SetCursor,
+		C3.Plugins.System.Cnds.Else,
+		C3.Plugins.System.Cnds.PickByComparison,
+		C3.Plugins.Sprite.Exps.LayerNumber,
 		C3.Plugins.Sprite.Cnds.CompareFrame,
 		C3.Plugins.Sprite.Acts.SetAnimFrame,
 		C3.Plugins.Sprite.Exps.AnimationFrameCount,
-		C3.Plugins.System.Cnds.Else,
 		C3.Plugins.Sprite.Exps.AnimationFrame,
-		C3.Plugins.System.Cnds.PickByComparison,
-		C3.Plugins.Sprite.Exps.LayerNumber,
 		C3.Plugins.Touch.Cnds.OnTapGestureObject,
 		C3.Plugins.iframe.Acts.Destroy
 		];
@@ -2838,7 +2835,6 @@ value:this.WaveFunc(this._i)*this._mag}]}]}}};
 		{volumen: 0},
 		{Timeline: 0},
 		{Mouse: 0},
-		{iconFilm: 0},
 		{iconCamara: 0},
 		{Sine: 0},
 		{circulo: 0},
@@ -2955,19 +2951,11 @@ value:this.WaveFunc(this._i)*this._mag}]}]}}};
 	self.C3_ExpressionFuncs = [
 		() => 1,
 		() => 2,
-		() => 75,
-		() => 150,
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => v0.GetValue();
-		},
-		() => 768,
-		() => 440,
-		() => 0,
 		p => {
 			const n0 = p._GetNode(0);
 			return () => n0.ExpObject();
 		},
+		() => 0,
 		p => {
 			const n0 = p._GetNode(0);
 			return () => (n0.ExpObject() - 1);
